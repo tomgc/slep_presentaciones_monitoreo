@@ -77,12 +77,10 @@
   }
   .boton.primario { background: var(--azul); color: #fff; }
   .boton.primario:hover { background: var(--azul-oscuro); border-color: var(--azul-oscuro); }
-  .boton.secundario { color: var(--azul); background: #fff; }
-  .boton.secundario:hover { background: var(--azul-suave); }
   .boton:focus-visible, .miniatura:focus-visible, .tarjeta h2 a:focus-visible { outline: 2px solid var(--azul); outline-offset: 2px; }
   .vacio { color: var(--gris); }
 
-  footer { color: var(--gris); font-size: .82rem; margin-top: 3rem; padding-bottom: 2rem; }
+  footer.contenedor { color: var(--gris); font-size: .82rem; margin-top: 3rem; padding-bottom: 2rem; }
 
   @media (max-width: 640px) {
     .area { text-align: left; }
@@ -114,7 +112,7 @@
 </main>
 
 <footer class="contenedor">
-  Cada presentación es un archivo autocontenido: con "Descargar" se guarda en el equipo y funciona sin conexión.
+  Servicio Local de Educación Pública Costa Central · Área de Monitoreo y Seguimiento de Procesos y Resultados Educativos
 </footer>
 
 <script>
@@ -181,8 +179,7 @@
     if (p.descripcion) cuerpo.appendChild(el("p", {}, p.descripcion));
 
     const acc = el("div", { class: "acciones" });
-    acc.appendChild(el("a", { class: "boton primario", href: p.archivo }, "Abrir"));
-    acc.appendChild(el("a", { class: "boton secundario", href: p.archivo, download: p.archivo.split("/").pop() }, "Descargar"));
+    acc.appendChild(el("a", { class: "boton primario", href: p.archivo }, "Abrir presentación"));
     cuerpo.appendChild(acc);
 
     art.appendChild(cuerpo);
