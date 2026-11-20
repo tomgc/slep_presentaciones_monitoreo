@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presentaciones | Área de Monitoreo, SLEP Costa Central</title>
+<meta name="description" content="Galería de presentaciones del Área de Monitoreo y Seguimiento de Procesos y Resultados Educativos, SLEP Costa Central.">
+<style>
+  @font-face { font-family: "gobCL"; src: url("assets/fuentes/gobCL_400.otf") format("opentype"); font-weight: 400; font-display: swap; }
+  @font-face { font-family: "gobCL"; src: url("assets/fuentes/gobCL_800.otf") format("opentype"); font-weight: 800; font-display: swap; }
+
+  :root {
+    --azul: #0062A0;
+    --azul-oscuro: #004273;
+    --azul-suave: #EDF4F9;
+    --texto: #282828;
+    --texto-2: #4A4A4A;
+    --gris: #747474;
+    --borde: #E7E7E7;
+    --fondo: #FAFAFA;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "gobCL", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    line-height: 1.5;
+  }
+  .contenedor { max-width: 1160px; margin: 0 auto; padding: 0 1.5rem; }
+
+  /* Encabezado */
+  header { background: #fff; border-bottom: 1px solid var(--borde); }
+  .encabezado {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 2rem; padding: 2rem 0 1.75rem; flex-wrap: wrap;
+  }
+  .logo { height: 72px; width: auto; display: block; }
+  .area { text-align: right; color: var(--gris); font-size: .9rem; max-width: 420px; }
+  .titulo { padding: 0 0 2rem; }
+  .titulo h1 { margin: 0; font-weight: 800; font-size: clamp(1.8rem, 3.5vw, 2.6rem); line-height: 1.15; }
+  .titulo p { margin: .5rem 0 0; color: var(--azul); font-size: 1.15rem; }
+
+  /* Barra de búsqueda */
+  .barra { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin: 2rem 0 1.5rem; flex-wrap: wrap; }
+  .buscador {
+    width: 100%; max-width: 380px; padding: .65rem .9rem;
+    border: 1px solid #D4D4D4; border-radius: 6px; font: inherit; background: #fff;
+  }
+  .buscador:focus { outline: 2px solid var(--azul); outline-offset: 1px; border-color: transparent; }
+  .conteo { color: var(--gris); font-size: .9rem; }
+
+  /* Galería */
+  .galeria { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+  .tarjeta {
+    background: #fff; border: 1px solid var(--borde); border-radius: 10px; overflow: hidden;
+    display: flex; flex-direction: column; transition: box-shadow .15s, transform .15s, border-color .15s;
+  }
+  .tarjeta:hover { border-color: #D5E7F2; box-shadow: 0 8px 24px rgba(0, 66, 115, .10); transform: translateY(-2px); }
+  .miniatura { display: block; aspect-ratio: 16 / 9; background: var(--azul-suave); border-bottom: 1px solid var(--borde); overflow: hidden; }
+  .miniatura img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .miniatura .sin-imagen {
+    height: 100%; display: flex; align-items: center; justify-content: center;
+    color: var(--azul); font-weight: 800; font-size: 1.1rem; padding: 1.5rem; text-align: center;
+  }
+  .cuerpo { padding: 1.1rem 1.25rem 1.25rem; display: flex; flex-direction: column; flex: 1; }
+  .meta { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; margin-bottom: .6rem; font-size: .8rem; color: var(--gris); }
+  .etiqueta { background: var(--azul-suave); color: var(--azul); font-weight: 800; padding: .15rem .55rem; border-radius: 999px; }
+  .tarjeta h2 { margin: 0 0 .45rem; font-size: 1.15rem; font-weight: 800; line-height: 1.3; }
+  .tarjeta h2 a { color: inherit; text-decoration: none; }
+  .tarjeta h2 a:hover { color: var(--azul); }
+  .tarjeta p { margin: 0 0 1.1rem; color: var(--texto-2); font-size: .93rem; flex: 1; }
+  .acciones { display: flex; gap: .6rem; }
+  .boton {
+    display: inline-flex; align-items: center; gap: .35rem; padding: .5rem .9rem; border-radius: 6px;
+    font-size: .9rem; text-decoration: none; border: 1px solid var(--azul);
+  }
+  .boton.primario { background: var(--azul); color: #fff; }
+  .boton.primario:hover { background: var(--azul-oscuro); border-color: var(--azul-oscuro); }
+  .boton.secundario { color: var(--azul); background: #fff; }
+  .boton.secundario:hover { background: var(--azul-suave); }
+  .boton:focus-visible, .miniatura:focus-visible, .tarjeta h2 a:focus-visible { outline: 2px solid var(--azul); outline-offset: 2px; }
+  .vacio { color: var(--gris); }
+
+  footer { color: var(--gris); font-size: .82rem; margin-top: 3rem; padding-bottom: 2rem; }
+
+  @media (max-width: 640px) {
+    .area { text-align: left; }
+    .logo { height: 56px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="contenedor">
+    <div class="encabezado">
+      <img class="logo" src="assets/logo_slep_costa_central.png" alt="Servicio Local de Educación Pública Costa Central">
+      <div class="area">Área de Monitoreo y Seguimiento de Procesos y Resultados Educativos</div>
+    </div>
+    <div class="titulo">
+      <h1>Presentaciones</h1>
+      <p>Concón, Puchuncaví, Quintero y Viña del Mar</p>
+    </div>
+  </div>
+</header>
+
+<main class="contenedor">
+  <div class="barra">
+    <input class="buscador" type="search" id="buscador" placeholder="Buscar por título o tema" aria-label="Buscar presentación">
+    <span class="conteo" id="conteo" aria-live="polite"></span>
+  </div>
+  <div class="galeria" id="galeria"></div>
+  <p class="vacio" id="vacio" hidden>No hay presentaciones que coincidan con la búsqueda.</p>
+</main>
+
+<footer class="contenedor">
+  Cada presentación es un archivo autocontenido: con "Descargar" se guarda en el equipo y funciona sin conexión.
+</footer>
+
+<script>
+  // CATÁLOGO DE PRESENTACIONES
+  // Para agregar una nueva:
+  //   1. copiar el .html en presentaciones/ (nombre en minúsculas, con guion bajo, sin tildes)
+  //   2. (opcional) copiar su portada 16:9 en miniaturas/ con el mismo nombre y extensión .jpg
+  //   3. agregar un objeto al inicio de esta lista (la primera aparece primero en la galería)
+  const presentaciones = [
+    {
+      titulo: "Monitoreo de Aprendizajes en la Educación Parvularia",
+      tema: "Educación Parvularia",
+      fecha: "Noviembre 2026",
+      laminas: 13,
+      descripcion: "Recorrido del monitoreo de aprendizajes: fundamentos, preparación, registro, seguimiento, análisis, la ficha y el informe.",
+      archivo: "presentaciones/monitoreo_aprendizajes_parvularia.html",
+      miniatura: "miniaturas/monitoreo_aprendizajes_parvularia.jpg"
+    },
+    {
+      titulo: "Mapa para el análisis del servicio educativo regional",
+      tema: "Territorio",
+      fecha: "Noviembre 2026",
+      laminas: 12,
+      descripcion: "Mapa interactivo del servicio educativo: objetivo, fuentes, proceso, capas de información, la ficha y proyecciones.",
+      archivo: "presentaciones/mapa_servicio_educativo_regional.html",
+      miniatura: "miniaturas/mapa_servicio_educativo_regional.jpg"
+    }
+  ];
+
+  const galeria = document.getElementById("galeria");
+  const vacio = document.getElementById("vacio");
+  const conteo = document.getElementById("conteo");
+
+  function el(tag, attrs = {}, texto) {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
+    if (texto !== undefined) n.textContent = texto;
+    return n;
+  }
+
+  function tarjeta(p) {
+    const art = el("article", { class: "tarjeta" });
+
+    const mini = el("a", { class: "miniatura", href: p.archivo, "aria-label": "Abrir " + p.titulo });
+    if (p.miniatura) {
+      const img = el("img", { src: p.miniatura, alt: "", loading: "lazy" });
+      img.onerror = () => { img.remove(); mini.appendChild(el("div", { class: "sin-imagen" }, p.titulo)); };
+      mini.appendChild(img);
+    } else {
+      mini.appendChild(el("div", { class: "sin-imagen" }, p.titulo));
+    }
+    art.appendChild(mini);
+
+    const cuerpo = el("div", { class: "cuerpo" });
+    const meta = el("div", { class: "meta" });
+    if (p.tema) meta.appendChild(el("span", { class: "etiqueta" }, p.tema));
+    const extra = [p.fecha, p.laminas ? p.laminas + " láminas" : null].filter(Boolean).join(" · ");
+    if (extra) meta.appendChild(el("span", {}, extra));
+    cuerpo.appendChild(meta);
+
+    const h2 = el("h2");
+    h2.appendChild(el("a", { href: p.archivo }, p.titulo));
+    cuerpo.appendChild(h2);
+    if (p.descripcion) cuerpo.appendChild(el("p", {}, p.descripcion));
+
+    const acc = el("div", { class: "acciones" });
+    acc.appendChild(el("a", { class: "boton primario", href: p.archivo }, "Abrir"));
+    acc.appendChild(el("a", { class: "boton secundario", href: p.archivo, download: p.archivo.split("/").pop() }, "Descargar"));
+    cuerpo.appendChild(acc);
+
+    art.appendChild(cuerpo);
+    return art;
+  }
+
+  function pintar(lista) {
+    galeria.replaceChildren(...lista.map(tarjeta));
+    vacio.hidden = lista.length > 0;
+    conteo.textContent = lista.length === 1 ? "1 presentación" : lista.length + " presentaciones";
+  }
+
+  const normalizar = s => (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+
+  document.getElementById("buscador").addEventListener("input", e => {
+    const q = normalizar(e.target.value.trim());
+    pintar(presentaciones.filter(p => normalizar([p.titulo, p.tema, p.descripcion, p.fecha].join(" ")).includes(q)));
+  });
+
+  pintar(presentaciones);
+</script>
+</body>
+</html>
